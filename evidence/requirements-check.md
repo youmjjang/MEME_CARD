@@ -2,11 +2,11 @@
 
 제공된 과제 원문에 있는 31개 항목을 대조했습니다. 원문은 C01 다음이 C03이며 **C02가 제시되지 않았으므로 새 기준을 만들어 넣지 않았습니다.**
 
-검사일: 2026-09-11. 프로그램 검사는 최종 소스에서 실제 실행했고, 공개 접속은 배포 후 별도로 확인합니다.
+검사일: 2026-09-11. 프로그램 검사는 최종 소스에서 실제 실행했고, 배포 후 로그인하지 않은 새 브라우저 컨텍스트에서 공개 주소 두 곳의 HTTP 200 응답과 편집기·소스 노출을 확인했습니다. 원문에 제시된 31개 항목을 모두 충족했습니다.
 
 | 기준 | 요구사항 | 결과 | 증거 |
 |---|---|---|---|
-| T03-C01 | 무로그인 공개 결과물/소스 URL | 배포 후 확인 | [공개 접속 확인](public-verification.json) |
+| T03-C01 | 무로그인 공개 결과물/소스 URL | PASS | [공개 접속 확인](public-verification.json) |
 | T03-C03 | 첫 화면에 이미지·문구 편집 도구 | PASS | [실행 기록](test-results.json) |
 | T03-C04 | PNG 불러오기 | PASS | [실행 기록](test-results.json) |
 | T03-C05 | JPEG 불러오기 | PASS | [실행 기록](test-results.json) |
@@ -15,9 +15,9 @@
 | T03-C08 | 문구 색 즉시 반영 | PASS | [실행 기록](test-results.json) |
 | T03-C09 | 지원하지 않는 파일 뒤 기존 작업 유지 | PASS | [실행 기록](test-results.json) |
 | T03-C10 | 지원하지 않는 파일 거부 이유 | PASS | [실행 기록](test-results.json) |
-| T03-C11 | 1:1 미리보기/저장 일치 | PASS | [실행 기록](test-results.json) |
-| T03-C12 | 4:5 미리보기/저장 일치 | PASS | [실행 기록](test-results.json) |
-| T03-C13 | 9:16 미리보기/저장 일치 | PASS | [실행 기록](test-results.json) |
+| T03-C11 | 1:1 미리보기/저장 일치 | PASS | [화면/파일 대조](preview-comparison.md) |
+| T03-C12 | 4:5 미리보기/저장 일치 | PASS | [화면/파일 대조](preview-comparison.md) |
+| T03-C13 | 9:16 미리보기/저장 일치 | PASS | [화면/파일 대조](preview-comparison.md) |
 | T03-C14 | 극단 입력 검사 12건 | PASS | [극단 입력 및 전후 증거](extreme-input-tests.md) |
 | T03-C15 | 동일 입력 수정 전 FAIL/수정 후 PASS | PASS | [극단 입력 및 전후 증거](extreme-input-tests.md) |
 | T03-C16 | 잘못된 극단 입력 뒤 편집 유지 | PASS | [극단 입력 및 전후 증거](extreme-input-tests.md) |

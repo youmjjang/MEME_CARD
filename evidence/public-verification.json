@@ -1,0 +1,44 @@
+{
+  "checkedAt": "2026-09-11T00:49:01.655Z",
+  "method": "Fresh isolated Microsoft Edge browser context without account login or existing cookies",
+  "resultUrl": {
+    "url": "https://youmjjang.github.io/MEME_CARD/",
+    "status": 200,
+    "editorVisible": true
+  },
+  "sourceUrl": {
+    "url": "https://github.com/youmjjang/MEME_CARD",
+    "status": 200,
+    "codeAndReadmeVisible": true
+  },
+  "deployedAssets": [
+    {
+      "file": "index.html",
+      "sha256": "866441eee05a761ba06abf794e17685f93dde5b1fd9d14135068a21d53c51862",
+      "matchesTestedSource": true
+    },
+    {
+      "file": "script.js",
+      "sha256": "da382d05ee90b647c80f8daa2af957d4731a19ae52566f4409f02406f4471c83",
+      "matchesTestedSource": true
+    },
+    {
+      "file": "styles.css",
+      "sha256": "5ac5fc240814076a2cd3074b055ea89f285b807182da572d9082f93051e58c64",
+      "matchesTestedSource": true
+    }
+  ],
+  "drag": {
+    "before": {
+      "x": 50,
+      "y": 78
+    },
+    "after": {
+      "x": 60,
+      "y": 60
+    },
+    "templateReloadPreserves": true,
+    "jsonRoundTripPreserves": true,
+    "downloadMatchesPreview": true
+  }
+}

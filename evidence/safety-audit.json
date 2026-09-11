@@ -113,6 +113,14 @@
       "sha256": "c5a9faaf8c4db6b3a7db6533cfe47eba69742605f4d2a60435f95c8bd599a458"
     },
     {
+      "file": "evidence/public-editor.png",
+      "width": 1500,
+      "height": 1940,
+      "opens": true,
+      "gps_entries": 0,
+      "sha256": "bbb5034c679ba5bcd53f6ef43ae43c5a04d8ffaa8c727438a5143347004ab195"
+    },
+    {
       "file": "evidence/template-crud.png",
       "width": 1500,
       "height": 1940,
