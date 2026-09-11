@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "exportedAt": "2026-09-11T00:00:00.000Z",
+  "templates": [
+    {
+      "id": "sample-1",
+      "name": "퇴근짤",
+      "ratio": "1:1",
+      "text": "오늘도 살아남았다",
+      "fontSize": 56,
+      "color": "#ffffff",
+      "x": 50,
+      "y": 78,
+      "fit": "cover",
+      "imageDataUrl": null,
+      "imageName": null,
+      "updatedAt": "2026-09-11T00:00:00.000Z",
+      "imagePosX": 50,
+      "imagePosY": 50
+    },
+    {
+      "id": "sample-2",
+      "name": "공지카드",
+      "ratio": "4:5",
+      "text": "안녕하세요\n공지드립니다",
+      "fontSize": 48,
+      "color": "#ffffff",
+      "x": 50,
+      "y": 72,
+      "fit": "cover",
+      "imageDataUrl": null,
+      "imageName": null,
+      "updatedAt": "2026-09-11T00:00:00.000Z",
+      "imagePosX": 50,
+      "imagePosY": 50
+    },
+    {
+      "id": "sample-3",
+      "name": "세로SNS",
+      "ratio": "9:16",
+      "text": "오늘의 한마디",
+      "fontSize": 52,
+      "color": "#ffffff",
+      "x": 50,
+      "y": 80,
+      "fit": "cover",
+      "imageDataUrl": null,
+      "imageName": null,
+      "updatedAt": "2026-09-11T00:00:00.000Z",
+      "imagePosX": 50,
+      "imagePosY": 50
+    }
+  ]
+}

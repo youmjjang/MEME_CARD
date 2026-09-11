@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MemeLab · 짤 카드 스튜디오</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand-block">
+        <div class="logo-mark">ML</div>
+        <div>
+          <p class="eyebrow">T03 CREATOR TOOL</p>
+          <h1>MemeLab</h1>
+          <p class="subtitle">사진 한 장으로 밈, 피드 카드, 스토리 이미지를 만드는 브라우저 편집기</p>
+        </div>
+      </div>
+      <div class="top-actions">
+        <span class="privacy-badge">LOCAL ONLY</span>
+        <span class="privacy-copy">원본 이미지는 브라우저 안에서만 처리됩니다.</span>
+      </div>
+    </header>
+
+    <section class="quick-strip" aria-label="빠른 레이아웃">
+      <div>
+        <span class="strip-label">QUICK LAYOUT</span>
+        <strong>빠른 시작</strong>
+      </div>
+      <button class="preset-btn active" data-preset="meme" type="button">
+        <span>01</span>
+        <b>정사각 밈</b>
+        <small>1:1 · 하단 문구</small>
+      </button>
+      <button class="preset-btn" data-preset="feed" type="button">
+        <span>02</span>
+        <b>피드 카드</b>
+        <small>4:5 · 중앙 문구</small>
+      </button>
+      <button class="preset-btn" data-preset="story" type="button">
+        <span>03</span>
+        <b>스토리</b>
+        <small>9:16 · 세로 화면</small>
+      </button>
+    </section>
+
+    <main class="workspace">
+      <aside class="panel editor-panel" aria-labelledby="editorTitle">
+        <div class="section-head">
+          <div>
+            <span class="step-dot">01</span>
+            <div>
+              <p class="small-label">SOURCE & TEXT</p>
+              <h2 id="editorTitle">편집</h2>
+            </div>
+          </div>
+          <button id="resetBtn" class="icon-btn" type="button">전체 초기화</button>
+        </div>
+
+        <label class="upload-card">
+          <span class="upload-icon">＋</span>
+          <span>
+            <b>이미지 가져오기</b>
+            <small>PNG · JPG · JPEG</small>
+          </span>
+          <input id="imageInput" type="file" accept="image/png,image/jpeg" />
+        </label>
+        <div class="file-meta" id="fileMeta">현재 배경: 기본 배경 사용 중</div>
+
+        <div class="control-card">
+          <label class="field">
+            <span>문구</span>
+            <textarea id="textInput" rows="5" maxlength="2000" placeholder="예: 오늘도 살아남았다">오늘도 살아남았다</textarea>
+            <small>글자를 직접 드래그해 위치를 바꾸세요. 긴 문구는 화면 안에 맞게 자동 축소됩니다. (최대 2,000자)</small>
+          </label>
+
+          <div class="field-group two-cols">
+            <label class="field">
+              <span>크기 <b id="fontSizeValue">56</b>px</span>
+              <input id="fontSizeInput" type="range" min="18" max="120" value="56" />
+            </label>
+            <label class="field color-field">
+              <span>색상</span>
+              <input id="colorInput" type="color" value="#ffffff" />
+            </label>
+          </div>
+
+          <div class="field-group two-cols">
+            <label class="field">
+              <span>문구 X <b id="xValue">50</b>%</span>
+              <input id="xInput" type="range" min="0" max="100" step="0.1" value="50" />
+            </label>
+            <label class="field">
+              <span>문구 Y <b id="yValue">78</b>%</span>
+              <input id="yInput" type="range" min="0" max="100" step="0.1" value="78" />
+            </label>
+          </div>
+        </div>
+
+        <div class="control-card text-style-card">
+          <div class="style-title-row">
+            <span>텍스트 스타일</span>
+            <small>테두리와 그림자까지 조정</small>
+          </div>
+
+          <div class="field-group two-cols">
+            <label class="field">
+              <span>글꼴</span>
+              <select id="fontFamilySelect">
+                <option value="system">기본 고딕</option>
+                <option value="malgun">맑은 고딕</option>
+                <option value="arial">Arial</option>
+                <option value="impact">Impact</option>
+                <option value="georgia">Georgia</option>
+                <option value="courier">Courier New</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>굵기</span>
+              <select id="fontWeightSelect">
+                <option value="400">보통</option>
+                <option value="700">굵게</option>
+                <option value="900" selected>아주 굵게</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="field">
+            <span>정렬</span>
+            <div class="align-buttons" role="group" aria-label="문구 정렬">
+              <button class="align-btn" data-align="left" type="button">왼쪽</button>
+              <button class="align-btn active" data-align="center" type="button">가운데</button>
+              <button class="align-btn" data-align="right" type="button">오른쪽</button>
+            </div>
+          </div>
+
+          <div class="field-group two-cols">
+            <label class="field">
+              <span>테두리 두께 <b id="strokeWidthValue">8</b>px</span>
+              <input id="strokeWidthInput" type="range" min="0" max="24" value="8" />
+            </label>
+            <label class="field color-field">
+              <span>테두리 색</span>
+              <input id="strokeColorInput" type="color" value="#000000" />
+            </label>
+          </div>
+
+          <label class="switch-row">
+            <input id="shadowToggle" type="checkbox" checked />
+            <span>그림자 사용</span>
+          </label>
+
+          <div class="field-group two-cols">
+            <label class="field">
+              <span>그림자 흐림 <b id="shadowBlurValue">12</b></span>
+              <input id="shadowBlurInput" type="range" min="0" max="30" value="12" />
+            </label>
+            <label class="field">
+              <span>그림자 거리 <b id="shadowOffsetValue">4</b>px</span>
+              <input id="shadowOffsetInput" type="range" min="0" max="20" value="4" />
+            </label>
+          </div>
+        </div>
+
+        <div class="control-card">
+          <div class="field">
+            <span>화면비</span>
+            <div class="ratio-buttons" role="group" aria-label="화면비 선택">
+              <button class="ratio-btn active" data-ratio="1:1" type="button"><b>1:1</b><small>Square</small></button>
+              <button class="ratio-btn" data-ratio="4:5" type="button"><b>4:5</b><small>Feed</small></button>
+              <button class="ratio-btn" data-ratio="9:16" type="button"><b>9:16</b><small>Story</small></button>
+            </div>
+          </div>
+
+          <div class="field-group two-cols">
+            <label class="field">
+              <span>배경 맞춤</span>
+              <select id="fitSelect">
+                <option value="cover">화면 채우기</option>
+                <option value="contain">전체 보기</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>파일 형식</span>
+              <select id="formatSelect">
+                <option value="png">PNG</option>
+                <option value="jpeg">JPEG</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <div class="control-card image-position-box">
+          <div class="image-position-header">
+            <span>이미지 위치</span>
+            <button id="resetImagePositionBtn" class="text-btn" type="button">가운데로</button>
+          </div>
+          <div class="field-group two-cols compact-sliders">
+            <label class="field">
+              <span>배경 X <b id="imagePosXValue">50</b>%</span>
+              <input id="imagePosXInput" type="range" min="0" max="100" value="50" />
+            </label>
+            <label class="field">
+              <span>배경 Y <b id="imagePosYValue">50</b>%</span>
+              <input id="imagePosYInput" type="range" min="0" max="100" value="50" />
+            </label>
+          </div>
+          <small>미리보기에서 사진을 직접 드래그해도 이동합니다.</small>
+        </div>
+
+        <button id="downloadBtn" class="primary-btn" type="button">이미지로 저장</button>
+        <div id="message" class="message" aria-live="polite"></div>
+      </aside>
+
+      <section class="stage-panel" aria-labelledby="previewTitle">
+        <div class="stage-toolbar">
+          <div>
+            <p class="small-label">LIVE CANVAS</p>
+            <h2 id="previewTitle">작업 화면</h2>
+          </div>
+          <div class="stage-tools">
+            <label class="guide-toggle">
+              <input id="safeGuideToggle" type="checkbox" />
+              <span>안전영역 보기</span>
+            </label>
+            <div class="preview-meta" id="previewLabel">1:1 · 1080 × 1080</div>
+          </div>
+        </div>
+
+        <div class="stage-shell">
+          <div class="canvas-wrap">
+            <canvas id="canvas" width="1080" height="1080" aria-label="미리보기 캔버스"></canvas>
+          </div>
+          <div class="drag-hint">글자를 잡으면 문구 이동 · 배경을 잡으면 이미지 이동</div>
+        </div>
+
+        <div class="stage-footer">
+          <div class="status-chip"><span></span> 실시간 반영</div>
+          <div>미리보기와 다운로드 결과는 같은 Canvas를 사용합니다.</div>
+        </div>
+      </section>
+
+      <aside class="panel library-panel" aria-labelledby="templateTitle">
+        <div class="section-head">
+          <div>
+            <span class="step-dot">02</span>
+            <div>
+              <p class="small-label">MY LIBRARY</p>
+              <h2 id="templateTitle">템플릿</h2>
+            </div>
+          </div>
+          <span id="templateCount" class="count-badge">0개</span>
+        </div>
+
+        <label class="field">
+          <span>템플릿 이름</span>
+          <input id="templateNameInput" type="text" maxlength="40" placeholder="예: 퇴근짤" />
+        </label>
+
+        <div class="template-actions">
+          <button id="saveTemplateBtn" class="secondary-btn" type="button">현재 디자인 저장</button>
+          <button id="updateTemplateBtn" class="ghost-btn" type="button" disabled>선택 템플릿 덮어쓰기</button>
+        </div>
+
+        <div id="templateList" class="template-list" aria-live="polite"></div>
+
+        <div class="divider"><span>BACKUP</span></div>
+
+        <div class="json-box">
+          <h3>JSON 백업 / 복원</h3>
+          <p>정상 JSON만 반영하고, 손상되거나 필수값이 빠진 파일은 기존 목록을 건드리지 않고 거부합니다.</p>
+          <div class="json-actions">
+            <button id="exportJsonBtn" class="ghost-btn" type="button">JSON 내보내기</button>
+            <label class="import-label">
+              JSON 가져오기
+              <input id="jsonInput" type="file" accept="application/json,.json" />
+            </label>
+          </div>
+        </div>
+
+        <div class="safety-note">
+          <b>공개 안전</b>
+          <span>개인정보·비밀값 없이, 완성 이미지는 새 파일로 생성합니다.</span>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

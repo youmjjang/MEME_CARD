@@ -1,0 +1,51 @@
+function drawText() {
+  const text = state.text;
+  if (text == null) return;
+
+  const scale = els.canvas.width / 1080;
+  const fontSize = state.fontSize * scale;
+  const maxWidth = els.canvas.width * 0.82;
+  const x = els.canvas.width * (state.x / 100);
+  const y = els.canvas.height * (state.y / 100);
+  const lineHeight = fontSize * 1.25;
+
+  ctx.save();
+  const fontMap = {
+    system: 'Pretendard, "Noto Sans KR", Arial, sans-serif',
+    malgun: '"Malgun Gothic", "맑은 고딕", sans-serif',
+    arial: 'Arial, sans-serif',
+    impact: 'Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif',
+    georgia: 'Georgia, "Times New Roman", serif',
+    courier: '"Courier New", Courier, monospace'
+  };
+  const family = fontMap[state.fontFamily] || fontMap.system;
+  ctx.font = `${state.fontWeight} ${fontSize}px ${family}`;
+  ctx.textAlign = state.textAlign;
+  ctx.textBaseline = 'middle';
+  ctx.lineJoin = 'round';
+  ctx.strokeStyle = state.strokeColor;
+  ctx.lineWidth = state.strokeWidth * scale;
+  ctx.fillStyle = state.color;
+  if (state.shadowEnabled) {
+    ctx.shadowColor = 'rgba(0,0,0,.55)';
+    ctx.shadowBlur = state.shadowBlur * scale;
+    ctx.shadowOffsetX = state.shadowOffset * scale;
+    ctx.shadowOffsetY = state.shadowOffset * scale;
+  }
+
+  const allLines = [];
+  for (const paragraph of String(text).split('\n')) {
+    allLines.push(...wrapParagraph(paragraph, maxWidth));
+  }
+
+  const totalHeight = lineHeight * Math.max(allLines.length - 1, 0);
+  allLines.forEach((line, index) => {
+    const lineY = y - totalHeight / 2 + index * lineHeight;
+    if (line !== '') {
+      if (state.strokeWidth > 0) ctx.strokeText(line, x, lineY, maxWidth);
+      ctx.fillText(line, x, lineY, maxWidth);
+    }
+  });
+  ctx.restore();
+}
+

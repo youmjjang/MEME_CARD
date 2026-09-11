@@ -1,0 +1,721 @@
+{
+  "date": "2026-09-11T00:45:05.879Z",
+  "base": "http://127.0.0.1:64857/",
+  "browser": "152.0.4191.66",
+  "results": [
+    {
+      "name": "C03: image/text tools visible at initial desktop viewport",
+      "status": "PASS",
+      "details": "1500x1100 fresh browser context"
+    },
+    {
+      "name": "EXT-01 긴 한글 20줄",
+      "status": "PASS",
+      "details": {
+        "input": "긴 문구 1번째 줄: 오늘도 한 걸음씩 나아갑니다\n긴 문구 2번째 줄: 오늘도 한 걸음씩 나아갑니다\n긴 문구 3번째 줄: 오늘도 한 걸음씩 나아갑니다\n긴 문구 4번째 줄: 오늘도 한 걸음씩 나아갑니다\n긴 문구 5번째 줄: 오늘도 한 걸음씩 나아갑니다\n긴 문구 6번째 줄: 오늘도 한 걸음씩 나아갑니다\n긴 문구 7번째 줄: 오늘도 한 걸음씩 나아갑니다\n긴 문구 8번째 줄: 오늘도 한 걸음씩 나아갑니다\n긴 문구 9번째 줄: 오늘도 한 걸음씩 나아갑니다\n긴 문구 10번째 줄: 오늘도 한 걸음씩 나아갑니다\n긴 문구 11번째 줄: 오늘도 한 걸음씩 나아갑니다\n긴 문구 12번째 줄: 오늘도 한 걸음씩 나아갑니다\n긴 문구 13번째 줄: 오늘도 한 걸음씩 나아갑니다\n긴 문구 14번째 줄: 오늘도 한 걸음씩 나아갑니다\n긴 문구 15번째 줄: 오늘도 한 걸음씩 나아갑니다\n긴 문구 16번째 줄: 오늘도 한 걸음씩 나아갑니다\n긴 문구 17번째 줄: 오늘도 한 걸음씩 나아갑니다\n긴 문구 18번째 줄: 오늘도 한 걸음씩 나아갑니다\n긴 문구 19번째 줄: 오늘도 한 걸음씩 나아갑니다\n긴 문구 20번째 줄: 오늘도 한 걸음씩 나아갑니다",
+        "image": null,
+        "expected": "all lines fit; baseline reproduction",
+        "lines": 20,
+        "layout": {
+          "boxes": [
+            {
+              "left": 211.86383056640625,
+              "top": 125.65584000000011,
+              "right": 868.1361694335938,
+              "bottom": 171.9502560000001
+            },
+            {
+              "left": 211.86383056640625,
+              "top": 171.95025600000008,
+              "right": 868.1361694335938,
+              "bottom": 218.2446720000001
+            },
+            {
+              "left": 211.86383056640625,
+              "top": 218.24467200000007,
+              "right": 868.1361694335938,
+              "bottom": 264.53908800000005
+            },
+            {
+              "left": 211.86383056640625,
+              "top": 264.5390880000001,
+              "right": 868.1361694335938,
+              "bottom": 310.83350400000006
+            },
+            {
+              "left": 211.86383056640625,
+              "top": 310.83350400000006,
+              "right": 868.1361694335938,
+              "bottom": 357.12792
+            },
+            {
+              "left": 211.86383056640625,
+              "top": 357.1279200000001,
+              "right": 868.1361694335938,
+              "bottom": 403.42233600000003
+            },
+            {
+              "left": 211.86383056640625,
+              "top": 403.4223360000001,
+              "right": 868.1361694335938,
+              "bottom": 449.71675200000004
+            },
+            {
+              "left": 211.86383056640625,
+              "top": 449.71675200000004,
+              "right": 868.1361694335938,
+              "bottom": 496.011168
+            },
+            {
+              "left": 211.86383056640625,
+              "top": 496.0111680000001,
+              "right": 868.1361694335938,
+              "bottom": 542.3055840000001
+            },
+            {
+              "left": 201.79705810546875,
+              "top": 542.3055840000001,
+              "right": 878.2029418945312,
+              "bottom": 588.6
+            },
+            {
+              "left": 201.79705810546875,
+              "top": 588.6,
+              "right": 878.2029418945312,
+              "bottom": 634.894416
+            },
+            {
+              "left": 201.79705810546875,
+              "top": 634.894416,
+              "right": 878.2029418945312,
+              "bottom": 681.1888319999999
+            },
+            {
+              "left": 201.79705810546875,
+              "top": 681.188832,
+              "right": 878.2029418945312,
+              "bottom": 727.483248
+            },
+            {
+              "left": 201.79705810546875,
+              "top": 727.483248,
+              "right": 878.2029418945312,
+              "bottom": 773.777664
+            },
+            {
+              "left": 201.79705810546875,
+              "top": 773.777664,
+              "right": 878.2029418945312,
+              "bottom": 820.0720799999999
+            },
+            {
+              "left": 201.79705810546875,
+              "top": 820.07208,
+              "right": 878.2029418945312,
+              "bottom": 866.366496
+            },
+            {
+              "left": 201.79705810546875,
+              "top": 866.366496,
+              "right": 878.2029418945312,
+              "bottom": 912.6609119999999
+            },
+            {
+              "left": 201.79705810546875,
+              "top": 912.6609119999999,
+              "right": 878.2029418945312,
+              "bottom": 958.9553279999999
+            },
+            {
+              "left": 201.79705810546875,
+              "top": 958.955328,
+              "right": 878.2029418945312,
+              "bottom": 1005.249744
+            },
+            {
+              "left": 201.79705810546875,
+              "top": 1005.2497440000001,
+              "right": 878.2029418945312,
+              "bottom": 1051.5441600000001
+            }
+          ],
+          "width": 1080,
+          "height": 1080,
+          "text": "긴 문구 1번째 줄: 오늘도 한 걸음씩 나아갑니다\n긴 문구 2번째 줄: 오늘도 한 걸음씩 나아갑니다\n긴 문구 3번째 줄: 오늘도 한 걸음씩 나아갑니다\n긴 문구 4번째 줄: 오늘도 한 걸음씩 나아갑니다\n긴 문구 5번째 줄: 오늘도 한 걸음씩 나아갑니다\n긴 문구 6번째 줄: 오늘도 한 걸음씩 나아갑니다\n긴 문구 7번째 줄: 오늘도 한 걸음씩 나아갑니다\n긴 문구 8번째 줄: 오늘도 한 걸음씩 나아갑니다\n긴 문구 9번째 줄: 오늘도 한 걸음씩 나아갑니다\n긴 문구 10번째 줄: 오늘도 한 걸음씩 나아갑니다\n긴 문구 11번째 줄: 오늘도 한 걸음씩 나아갑니다\n긴 문구 12번째 줄: 오늘도 한 걸음씩 나아갑니다\n긴 문구 13번째 줄: 오늘도 한 걸음씩 나아갑니다\n긴 문구 14번째 줄: 오늘도 한 걸음씩 나아갑니다\n긴 문구 15번째 줄: 오늘도 한 걸음씩 나아갑니다\n긴 문구 16번째 줄: 오늘도 한 걸음씩 나아갑니다\n긴 문구 17번째 줄: 오늘도 한 걸음씩 나아갑니다\n긴 문구 18번째 줄: 오늘도 한 걸음씩 나아갑니다\n긴 문구 19번째 줄: 오늘도 한 걸음씩 나아갑니다\n긴 문구 20번째 줄: 오늘도 한 걸음씩 나아갑니다"
+        },
+        "exportMatches": true
+      }
+    },
+    {
+      "name": "EXT-02 긴 영문",
+      "status": "PASS",
+      "details": {
+        "input": "ThisIsAVeryLongEnglishSentenceWithoutSpacesThisIsAVeryLongEnglishSentenceWithoutSpacesThisIsAVeryLongEnglishSentenceWithoutSpacesThisIsAVeryLongEnglishSentenceWithoutSpacesThisIsAVeryLongEnglishSentenceWithoutSpacesThisIsAVeryLongEnglishSentenceWithoutSpacesThisIsAVeryLongEnglishSentenceWithoutSpacesThisIsAVeryLongEnglishSentenceWithoutSpacesThisIsAVeryLongEnglishSentenceWithoutSpaces",
+        "image": null,
+        "expected": "automatic wrapping",
+        "lines": 13,
+        "layout": {
+          "boxes": [
+            {
+              "left": 105.54730224609375,
+              "top": 134.28000000000006,
+              "right": 974.4526977539062,
+              "bottom": 204.84000000000006
+            },
+            {
+              "left": 94.28289794921875,
+              "top": 204.84000000000006,
+              "right": 985.7171020507812,
+              "bottom": 275.40000000000003
+            },
+            {
+              "left": 97.25650024414062,
+              "top": 275.4000000000001,
+              "right": 982.7434997558594,
+              "bottom": 345.96000000000004
+            },
+            {
+              "left": 92.9976806640625,
+              "top": 345.96000000000004,
+              "right": 987.0023193359375,
+              "bottom": 416.52
+            },
+            {
+              "left": 92.26690673828125,
+              "top": 416.52000000000004,
+              "right": 987.7330932617188,
+              "bottom": 487.08
+            },
+            {
+              "left": 88.63809204101562,
+              "top": 487.08000000000004,
+              "right": 991.3619079589844,
+              "bottom": 557.64
+            },
+            {
+              "left": 90.47769165039062,
+              "top": 557.64,
+              "right": 989.5223083496094,
+              "bottom": 628.1999999999999
+            },
+            {
+              "left": 92.6953125,
+              "top": 628.2,
+              "right": 987.3046875,
+              "bottom": 698.76
+            },
+            {
+              "left": 96.3240966796875,
+              "top": 698.76,
+              "right": 983.6759033203125,
+              "bottom": 769.3199999999999
+            },
+            {
+              "left": 89.49490356445312,
+              "top": 769.3199999999999,
+              "right": 990.5050964355469,
+              "bottom": 839.8799999999999
+            },
+            {
+              "left": 100.2301025390625,
+              "top": 839.88,
+              "right": 979.7698974609375,
+              "bottom": 910.4399999999999
+            },
+            {
+              "left": 92.31729125976562,
+              "top": 910.4399999999999,
+              "right": 987.6827087402344,
+              "bottom": 980.9999999999999
+            },
+            {
+              "left": 220.13165283203125,
+              "top": 980.9999999999999,
+              "right": 859.8683471679688,
+              "bottom": 1051.56
+            }
+          ],
+          "width": 1080,
+          "height": 1080,
+          "text": "ThisIsAVeryLongEnglishSentenceWithoutSpacesThisIsAVeryLongEnglishSentenceWithoutSpacesThisIsAVeryLongEnglishSentenceWithoutSpacesThisIsAVeryLongEnglishSentenceWithoutSpacesThisIsAVeryLongEnglishSentenceWithoutSpacesThisIsAVeryLongEnglishSentenceWithoutSpacesThisIsAVeryLongEnglishSentenceWithoutSpacesThisIsAVeryLongEnglishSentenceWithoutSpacesThisIsAVeryLongEnglishSentenceWithoutSpaces"
+        },
+        "exportMatches": true
+      }
+    },
+    {
+      "name": "EXT-03 한글·영문 혼합",
+      "status": "PASS",
+      "details": {
+        "input": "오늘 Meeting is at 3PM in Room B. 함께 시작해요!",
+        "image": null,
+        "expected": "mixed scripts visible",
+        "lines": 2,
+        "layout": {
+          "boxes": [
+            {
+              "left": 100.80413818359375,
+              "top": 763.9999999999999,
+              "right": 979.1958618164062,
+              "bottom": 842.4
+            },
+            {
+              "left": 320.1000518798828,
+              "top": 842.3999999999999,
+              "right": 759.8999481201172,
+              "bottom": 920.8
+            }
+          ],
+          "width": 1080,
+          "height": 1080,
+          "text": "오늘 Meeting is at 3PM in Room B. 함께 시작해요!"
+        },
+        "exportMatches": true
+      }
+    },
+    {
+      "name": "EXT-04 명시적 줄바꿈",
+      "status": "PASS",
+      "details": {
+        "input": "첫째 줄\n둘째 줄\n셋째 줄",
+        "image": null,
+        "expected": "three lines",
+        "lines": 3,
+        "layout": {
+          "boxes": [
+            {
+              "left": 444.30802154541016,
+              "top": 724.8,
+              "right": 635.6919784545898,
+              "bottom": 803.2
+            },
+            {
+              "left": 444.30802154541016,
+              "top": 803.1999999999999,
+              "right": 635.6919784545898,
+              "bottom": 881.6
+            },
+            {
+              "left": 444.30802154541016,
+              "top": 881.5999999999999,
+              "right": 635.6919784545898,
+              "bottom": 960
+            }
+          ],
+          "width": 1080,
+          "height": 1080,
+          "text": "첫째 줄\n둘째 줄\n셋째 줄"
+        },
+        "exportMatches": true
+      }
+    },
+    {
+      "name": "EXT-05 이모지",
+      "status": "PASS",
+      "details": {
+        "input": "오늘도 화이팅 😀😂🔥 👨‍👩‍👧‍👦 👍🏽 🇰🇷",
+        "image": null,
+        "expected": "whole grapheme clusters",
+        "lines": 1,
+        "layout": {
+          "boxes": [
+            {
+              "left": 125.88400268554688,
+              "top": 803.1999999999999,
+              "right": 954.1159973144531,
+              "bottom": 881.6
+            }
+          ],
+          "width": 1080,
+          "height": 1080,
+          "text": "오늘도 화이팅 😀😂🔥 👨‍👩‍👧‍👦 👍🏽 🇰🇷"
+        },
+        "exportMatches": true
+      }
+    },
+    {
+      "name": "EXT-06 빈 문구",
+      "status": "PASS",
+      "details": {
+        "input": "",
+        "image": null,
+        "expected": "background only",
+        "lines": 0,
+        "layout": {
+          "boxes": [],
+          "width": 1080,
+          "height": 1080,
+          "text": ""
+        },
+        "exportMatches": true
+      }
+    },
+    {
+      "name": "EXT-07 짧은 문구",
+      "status": "PASS",
+      "details": {
+        "input": "가",
+        "image": null,
+        "expected": "single glyph",
+        "lines": 1,
+        "layout": {
+          "boxes": [
+            {
+              "left": 502.24000549316406,
+              "top": 803.1999999999999,
+              "right": 577.7599945068359,
+              "bottom": 881.6
+            }
+          ],
+          "width": 1080,
+          "height": 1080,
+          "text": "가"
+        },
+        "exportMatches": true
+      }
+    },
+    {
+      "name": "EXT-08 세로 JPEG",
+      "status": "PASS",
+      "details": {
+        "input": "세로 사진도 자유롭게",
+        "image": "sample-portrait.jpg",
+        "expected": "JPEG decode/cover",
+        "lines": 1,
+        "layout": {
+          "boxes": [
+            {
+              "left": 283.3360595703125,
+              "top": 803.1999999999999,
+              "right": 796.6639404296875,
+              "bottom": 881.6
+            }
+          ],
+          "width": 1080,
+          "height": 1080,
+          "text": "세로 사진도 자유롭게"
+        },
+        "exportMatches": true
+      }
+    },
+    {
+      "name": "EXT-09 가로 PNG",
+      "status": "PASS",
+      "details": {
+        "input": "넓은 하루의 시작",
+        "image": "sample-landscape.png",
+        "expected": "PNG decode/cover",
+        "lines": 1,
+        "layout": {
+          "boxes": [
+            {
+              "left": 334.8560485839844,
+              "top": 803.1999999999999,
+              "right": 745.1439514160156,
+              "bottom": 881.6
+            }
+          ],
+          "width": 1080,
+          "height": 1080,
+          "text": "넓은 하루의 시작"
+        },
+        "exportMatches": true
+      }
+    },
+    {
+      "name": "EXT-10 투명 PNG",
+      "status": "PASS",
+      "details": {
+        "input": "투명 배경 합성",
+        "image": "sample-transparent.png",
+        "expected": "transparent pixels composited",
+        "lines": 1,
+        "layout": {
+          "boxes": [
+            {
+              "left": 360.6160430908203,
+              "top": 803.1999999999999,
+              "right": 719.3839569091797,
+              "bottom": 881.6
+            }
+          ],
+          "width": 1080,
+          "height": 1080,
+          "text": "투명 배경 합성"
+        },
+        "exportMatches": true
+      }
+    },
+    {
+      "name": "EXT-11 특수문자",
+      "status": "PASS",
+      "details": {
+        "input": "!@#$%^&*()[]{}<> / & \"quotes\"",
+        "image": null,
+        "expected": "literal text, no HTML",
+        "lines": 1,
+        "layout": {
+          "boxes": [
+            {
+              "left": 87.6441650390625,
+              "top": 803.1999999999999,
+              "right": 992.3558349609375,
+              "bottom": 881.6
+            }
+          ],
+          "width": 1080,
+          "height": 1080,
+          "text": "!@#$%^&*()[]{}<> / & \"quotes\""
+        },
+        "exportMatches": true
+      }
+    },
+    {
+      "name": "EXT-12 지원하지 않는 파일",
+      "status": "PASS",
+      "details": {
+        "input": "기존 작업을 지켜주세요",
+        "image": null,
+        "expected": "reject + preserve canvas and state",
+        "lines": 1,
+        "layout": {
+          "boxes": [
+            {
+              "left": 257.5760498046875,
+              "top": 803.1999999999999,
+              "right": 822.4239501953125,
+              "bottom": 881.6
+            }
+          ],
+          "width": 1080,
+          "height": 1080,
+          "text": "기존 작업을 지켜주세요"
+        },
+        "exportMatches": true
+      }
+    },
+    {
+      "name": "C06-C08: sliders update position, size and color",
+      "status": "PASS",
+      "details": "each input changed the rendered canvas immediately"
+    },
+    {
+      "name": "Text drag: default background, image background, all alignments",
+      "status": "PASS",
+      "details": [
+        {
+          "ratio": "1:1",
+          "align": "left",
+          "before": {
+            "x": 50,
+            "y": 50
+          },
+          "after": {
+            "x": 52.5,
+            "y": 44.2,
+            "ix": 50,
+            "iy": 50
+          }
+        },
+        {
+          "ratio": "1:1",
+          "align": "center",
+          "before": {
+            "x": 50,
+            "y": 50
+          },
+          "after": {
+            "x": 52.5,
+            "y": 44.2,
+            "ix": 50,
+            "iy": 50
+          }
+        },
+        {
+          "ratio": "1:1",
+          "align": "right",
+          "before": {
+            "x": 50,
+            "y": 50
+          },
+          "after": {
+            "x": 52.5,
+            "y": 44.2,
+            "ix": 50,
+            "iy": 50
+          }
+        },
+        {
+          "ratio": "4:5",
+          "align": "left",
+          "before": {
+            "x": 50,
+            "y": 50
+          },
+          "after": {
+            "x": 53.1,
+            "y": 44.2,
+            "ix": 50,
+            "iy": 50
+          }
+        },
+        {
+          "ratio": "4:5",
+          "align": "center",
+          "before": {
+            "x": 50,
+            "y": 50
+          },
+          "after": {
+            "x": 53.1,
+            "y": 44.2,
+            "ix": 50,
+            "iy": 50
+          }
+        },
+        {
+          "ratio": "4:5",
+          "align": "right",
+          "before": {
+            "x": 50,
+            "y": 50
+          },
+          "after": {
+            "x": 53.1,
+            "y": 44.2,
+            "ix": 50,
+            "iy": 50
+          }
+        },
+        {
+          "ratio": "9:16",
+          "align": "left",
+          "before": {
+            "x": 50,
+            "y": 50
+          },
+          "after": {
+            "x": 54.4,
+            "y": 44.2,
+            "ix": 50,
+            "iy": 50
+          }
+        },
+        {
+          "ratio": "9:16",
+          "align": "center",
+          "before": {
+            "x": 50,
+            "y": 50
+          },
+          "after": {
+            "x": 54.4,
+            "y": 44.2,
+            "ix": 50,
+            "iy": 50
+          }
+        },
+        {
+          "ratio": "9:16",
+          "align": "right",
+          "before": {
+            "x": 50,
+            "y": 50
+          },
+          "after": {
+            "x": 54.4,
+            "y": 44.2,
+            "ix": 50,
+            "iy": 50
+          }
+        }
+      ]
+    },
+    {
+      "name": "Background drag preserves text",
+      "status": "PASS",
+      "details": {
+        "before": {
+          "x": 50,
+          "y": 78,
+          "ix": 50
+        },
+        "after": {
+          "x": 50,
+          "y": 78,
+          "ix": 57
+        }
+      }
+    },
+    {
+      "name": "C11-C13, C25-C26: three ratios and actual exported images",
+      "status": "PASS",
+      "details": [
+        {
+          "ratio": "1:1",
+          "name": "1x1",
+          "text": "오늘도 한 걸음 앞으로",
+          "width": 1080,
+          "height": 1080
+        },
+        {
+          "ratio": "4:5",
+          "name": "4x5",
+          "text": "잠깐 쉬어가도 괜찮아",
+          "width": 1080,
+          "height": 1350
+        },
+        {
+          "ratio": "9:16",
+          "name": "9x16",
+          "text": "나만의 속도로\n계속 나아가기",
+          "width": 1080,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "name": "Safe guide excluded from export",
+      "status": "PASS",
+      "details": "guide-only difference; exported pixels match clean preview"
+    },
+    {
+      "name": "C17-C21: create 3, load, update, delete, reload",
+      "status": "PASS",
+      "details": [
+        {
+          "name": "B",
+          "text": "템플릿 B",
+          "x": 50,
+          "y": 78
+        },
+        {
+          "name": "A",
+          "text": "수정된 A",
+          "x": 60,
+          "y": 40
+        }
+      ]
+    },
+    {
+      "name": "C22-C24: JSON round-trip, broken syntax and missing fields",
+      "status": "PASS",
+      "details": "export reimport identical; both invalid files leave list unchanged; provided valid file restores 3"
+    },
+    {
+      "name": "Storage failure rollback + corrupt image + duplicate IDs",
+      "status": "PASS",
+      "details": "all rejected atomically"
+    },
+    {
+      "name": "Corrupt PNG upload preserves work",
+      "status": "PASS",
+      "details": "decode error displayed; canvas/state identical"
+    },
+    {
+      "name": "Mobile touch text drag",
+      "status": "PASS",
+      "details": "390px touch viewport; no horizontal overflow"
+    }
+  ],
+  "errors": []
+}

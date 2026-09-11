@@ -1,0 +1,231 @@
+{
+  "images": [
+    {
+      "file": "assets/sample-landscape.png",
+      "width": 1600,
+      "height": 900,
+      "opens": true,
+      "gps_entries": 0,
+      "sha256": "218b86dbf38e065aa20dada0441c8c96f2dc3142c803dda9440211a2798c4b29"
+    },
+    {
+      "file": "assets/sample-portrait.jpg",
+      "width": 900,
+      "height": 1600,
+      "opens": true,
+      "gps_entries": 0,
+      "sha256": "a1d61e1ec4fb1a7df679249de67a94e4e1eaf1d0020df04148c0410acc64c6a5"
+    },
+    {
+      "file": "assets/sample-transparent.png",
+      "width": 1000,
+      "height": 1000,
+      "opens": true,
+      "gps_entries": 0,
+      "sha256": "fdbd375fc242f69fc812c038940792a6ba490ff34d15e74cd15d4166b72bd2ec"
+    },
+    {
+      "file": "evidence/after-long-text.png",
+      "width": 600,
+      "height": 600,
+      "opens": true,
+      "gps_entries": 0,
+      "sha256": "605e82e95da4cdae9a31ac3204986bb7d5e50c4da22a90a489025e5672d381bc"
+    },
+    {
+      "file": "evidence/before-long-text.png",
+      "width": 600,
+      "height": 600,
+      "opens": true,
+      "gps_entries": 0,
+      "sha256": "aa79cbc17443a45e386bfe9fbb29a5c28bf875c1dd73f4cae107315a6d53120d"
+    },
+    {
+      "file": "evidence/editor-desktop.png",
+      "width": 1500,
+      "height": 1940,
+      "opens": true,
+      "gps_entries": 0,
+      "sha256": "2f61228996e74597a9edd2f6d16211210515d7b762594ab71fa9e944d5fde62a"
+    },
+    {
+      "file": "evidence/finished-card-1x1.png",
+      "width": 1080,
+      "height": 1080,
+      "opens": true,
+      "gps_entries": 0,
+      "sha256": "55b5e51edd73b335fd7c259de41423a1b24aa859d3afa2b031363920b386f698"
+    },
+    {
+      "file": "evidence/finished-card-4x5.png",
+      "width": 1080,
+      "height": 1350,
+      "opens": true,
+      "gps_entries": 0,
+      "sha256": "4f66e526314eff59a6360082b75202fd4f437f087e6871e3583d138fe766d4d6"
+    },
+    {
+      "file": "evidence/finished-card-9x16.png",
+      "width": 1080,
+      "height": 1920,
+      "opens": true,
+      "gps_entries": 0,
+      "sha256": "858bf9303c64a534a327769a7f82a0a7387971267274f2326dcfee1293798b18"
+    },
+    {
+      "file": "evidence/jpeg-export.jpg",
+      "width": 1080,
+      "height": 1920,
+      "opens": true,
+      "gps_entries": 0,
+      "sha256": "d0192198e9061af3d07c5dc1540e496e731c44addeaede13ad2e5fa57b92f982"
+    },
+    {
+      "file": "evidence/mobile.png",
+      "width": 390,
+      "height": 4288,
+      "opens": true,
+      "gps_entries": 0,
+      "sha256": "d2598a6349952363a2fb18fdf11f5cbbba46db06e016680db1dc0a12e780d05e"
+    },
+    {
+      "file": "evidence/preview-1x1.png",
+      "width": 600,
+      "height": 600,
+      "opens": true,
+      "gps_entries": 0,
+      "sha256": "337598ff76212d99b6199e2f9b89e90118009a1c16b40a2786109873418b54c0"
+    },
+    {
+      "file": "evidence/preview-4x5.png",
+      "width": 480,
+      "height": 600,
+      "opens": true,
+      "gps_entries": 0,
+      "sha256": "a5dbe883cd0f9624e03834d2d24b3ec384447602d9ca319cfe2291a0e268fc00"
+    },
+    {
+      "file": "evidence/preview-9x16.png",
+      "width": 338,
+      "height": 600,
+      "opens": true,
+      "gps_entries": 0,
+      "sha256": "c5a9faaf8c4db6b3a7db6533cfe47eba69742605f4d2a60435f95c8bd599a458"
+    },
+    {
+      "file": "evidence/template-crud.png",
+      "width": 1500,
+      "height": 1940,
+      "opens": true,
+      "gps_entries": 0,
+      "sha256": "369e7f509979073ca338512fff251158ea449cec898aa1bcd02aa5096ef01047"
+    },
+    {
+      "file": "evidence/test-01.png",
+      "width": 1080,
+      "height": 1080,
+      "opens": true,
+      "gps_entries": 0,
+      "sha256": "d370918dadc1df763c9ab2ff6089a8b8181e9ef04d62232a2f9f9971ba2ca9b7"
+    },
+    {
+      "file": "evidence/test-02.png",
+      "width": 1080,
+      "height": 1080,
+      "opens": true,
+      "gps_entries": 0,
+      "sha256": "ec0fb392bb2cd23262249a590b60596fb9602a6b590e22ee3622f7f5a837b90c"
+    },
+    {
+      "file": "evidence/test-03.png",
+      "width": 1080,
+      "height": 1080,
+      "opens": true,
+      "gps_entries": 0,
+      "sha256": "0e0c8064fd90aeb8de2026cf71c377ef27c154ab2dbb66df0b6c954ddd5a813e"
+    },
+    {
+      "file": "evidence/test-04.png",
+      "width": 1080,
+      "height": 1080,
+      "opens": true,
+      "gps_entries": 0,
+      "sha256": "407d48285c6759f64984a57e7e4291e190026020ba4d96e5f4af85f8465ec0c1"
+    },
+    {
+      "file": "evidence/test-05.png",
+      "width": 1080,
+      "height": 1080,
+      "opens": true,
+      "gps_entries": 0,
+      "sha256": "4a8a0e0f405fbd02a74dbeb03c2e139f8b0ad201460de445e219e331e28e3bdf"
+    },
+    {
+      "file": "evidence/test-06.png",
+      "width": 1080,
+      "height": 1080,
+      "opens": true,
+      "gps_entries": 0,
+      "sha256": "9dd46a8f9fbeb34757a94d4b797f3735638a1de40480e649d5f1dccc672d93ec"
+    },
+    {
+      "file": "evidence/test-07.png",
+      "width": 1080,
+      "height": 1080,
+      "opens": true,
+      "gps_entries": 0,
+      "sha256": "8f1671978c327beb83f577cbbc887603420c91a25503677d5cfae4911c8721bc"
+    },
+    {
+      "file": "evidence/test-08.png",
+      "width": 1080,
+      "height": 1080,
+      "opens": true,
+      "gps_entries": 0,
+      "sha256": "c0ecbbeb726395d9453fe4a33b74702d8515cfbf28867452fd63eb8e5ef56475"
+    },
+    {
+      "file": "evidence/test-09.png",
+      "width": 1080,
+      "height": 1080,
+      "opens": true,
+      "gps_entries": 0,
+      "sha256": "5d1a0a57c9d503e95a08a95222f44076d3da5539c7d21a841574c5a2e300c55d"
+    },
+    {
+      "file": "evidence/test-10.png",
+      "width": 1080,
+      "height": 1080,
+      "opens": true,
+      "gps_entries": 0,
+      "sha256": "538f418b9ca7645743af216d25ca33dc788196871efadd97532c73b8fc01a09d"
+    },
+    {
+      "file": "evidence/test-11.png",
+      "width": 1080,
+      "height": 1080,
+      "opens": true,
+      "gps_entries": 0,
+      "sha256": "ce1d0461355bc2ecd23b64426ecbe8f6a9ceea853a6f7d29a11908407737af8d"
+    },
+    {
+      "file": "evidence/test-12.png",
+      "width": 1080,
+      "height": 1080,
+      "opens": true,
+      "gps_entries": 0,
+      "sha256": "f0a2c4675b07f203851300de502b91080cb2450747068d27186b214e060b6d1a"
+    },
+    {
+      "file": "evidence/without-guide.png",
+      "width": 1080,
+      "height": 1920,
+      "opens": true,
+      "gps_entries": 0,
+      "sha256": "858bf9303c64a534a327769a7f82a0a7387971267274f2326dcfee1293798b18"
+    }
+  ],
+  "gps_entries": 0,
+  "source_secret_or_phone_findings": [],
+  "note": "Image metadata checked with Pillow; public screen and samples reviewed visually. Repository identity uses GitHub username/noreply commit email."
+}
