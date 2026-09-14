@@ -5,6 +5,7 @@
   "description": "T03 짤·카드 스튜디오 — Canvas 편집, 드래그, 템플릿, JSON 복원",
   "scripts": {
     "test": "node scripts/verify.cjs",
+    "test:t05": "node scripts/verify-t05.cjs",
     "samples": "node scripts/generate-samples.cjs"
   },
   "devDependencies": {
