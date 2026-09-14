@@ -333,6 +333,26 @@ input[type="color"] {
 .color-field .field,
 .color-field { margin-top: 0; }
 
+.position-lock-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 14px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--panel-soft);
+  cursor: pointer;
+}
+.position-lock-row input { accent-color: var(--accent); }
+.position-lock-row span { display: grid; gap: 2px; }
+.position-lock-row small { color: var(--muted); }
+.position-lock-row.is-locked {
+  border-color: #b8c2ff;
+  background: var(--accent-soft);
+}
+.position-lock-row.is-locked small { color: var(--accent); font-weight: 800; }
+
 .ratio-buttons {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

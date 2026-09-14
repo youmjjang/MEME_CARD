@@ -16,6 +16,8 @@ const els = {
   xValue: document.getElementById('xValue'),
   yInput: document.getElementById('yInput'),
   yValue: document.getElementById('yValue'),
+  textLockToggle: document.getElementById('textLockToggle'),
+  textLockStatus: document.getElementById('textLockStatus'),
   fitSelect: document.getElementById('fitSelect'),
   formatSelect: document.getElementById('formatSelect'),
   imagePosXInput: document.getElementById('imagePosXInput'),
@@ -78,6 +80,7 @@ function makeDefaultState() {
     color: '#ffffff',
     x: 50,
     y: 78,
+    textLocked: false,
     fit: 'cover',
     fontFamily: 'system',
     fontWeight: 900,
@@ -135,6 +138,15 @@ function updateImagePositionInputs() {
   els.imagePosYInput.value = String(state.imagePosY);
   els.imagePosXValue.textContent = state.imagePosX;
   els.imagePosYValue.textContent = state.imagePosY;
+}
+
+function updateTextLockUi() {
+  els.textLockToggle.checked = state.textLocked;
+  els.xInput.disabled = state.textLocked;
+  els.yInput.disabled = state.textLocked;
+  els.textLockStatus.textContent = state.textLocked ? '문구 위치 잠김' : '문구 위치 이동 가능';
+  els.textLockToggle.closest('.position-lock-row').classList.toggle('is-locked', state.textLocked);
+  els.canvas.classList.toggle('text-locked', state.textLocked);
 }
 
 function drawDefaultBackground() {
@@ -341,6 +353,7 @@ function render(includeGuide = true) {
   els.yInput.value = String(state.y);
   els.xValue.textContent = state.x;
   els.yValue.textContent = state.y;
+  updateTextLockUi();
   els.canvas.classList.toggle('is-draggable', Boolean(imageObj || textBoxes.length));
 }
 
@@ -355,6 +368,7 @@ function syncStateFromInputs() {
   state.color = els.colorInput.value;
   state.x = Number(els.xInput.value);
   state.y = Number(els.yInput.value);
+  state.textLocked = els.textLockToggle.checked;
   state.fit = els.fitSelect.value;
   state.fontFamily = els.fontFamilySelect.value;
   state.fontWeight = Number(els.fontWeightSelect.value);
@@ -384,6 +398,7 @@ function syncStateFromInputs() {
     els.colorInput,
     els.xInput,
     els.yInput,
+    els.textLockToggle,
     els.fitSelect,
     els.imagePosXInput,
     els.imagePosYInput,
@@ -527,6 +542,7 @@ els.resetBtn.addEventListener('click', () => {
   els.colorInput.value = state.color;
   els.xInput.value = state.x;
   els.yInput.value = state.y;
+  els.textLockToggle.checked = state.textLocked;
   els.fitSelect.value = state.fit;
   els.fontFamilySelect.value = state.fontFamily;
   els.fontWeightSelect.value = String(state.fontWeight);
@@ -835,6 +851,7 @@ function initializeInputs() {
   els.colorInput.value = state.color;
   els.xInput.value = state.x;
   els.yInput.value = state.y;
+  els.textLockToggle.checked = state.textLocked;
   els.fitSelect.value = state.fit;
   els.fontFamilySelect.value = state.fontFamily;
   els.fontWeightSelect.value = String(state.fontWeight);
@@ -867,6 +884,10 @@ function onPointerDown(event) {
   const px = (event.clientX - rect.left) * scaleX;
   const py = (event.clientY - rect.top) * scaleY;
   const hitText = textBoxes.some(box => px >= box.left && px <= box.right && py >= box.top && py <= box.bottom);
+  if (hitText && state.textLocked) {
+    showMessage('문구 위치가 잠겨 있습니다. 잠금을 해제한 뒤 이동하세요.');
+    return;
+  }
   if (!hitText && !imageObj) return;
   dragState.target = hitText ? 'text' : 'image';
   dragState.startX = state.x;
