@@ -598,6 +598,7 @@ function normalizeTemplate(template) {
     shadowEnabled: typeof template.shadowEnabled === 'boolean' ? template.shadowEnabled : true,
     shadowBlur: typeof template.shadowBlur === 'number' ? template.shadowBlur : 12,
     shadowOffset: typeof template.shadowOffset === 'number' ? template.shadowOffset : 4,
+    textLocked: typeof template.textLocked === 'boolean' ? template.textLocked : false,
     imagePosX: typeof template.imagePosX === 'number' ? clamp(template.imagePosX, 0, 100) : 50,
     imagePosY: typeof template.imagePosY === 'number' ? clamp(template.imagePosY, 0, 100) : 50,
     imageDataUrl: template.imageDataUrl ?? null,
@@ -624,6 +625,7 @@ function makeTemplate(name, id = makeId()) {
     shadowEnabled: state.shadowEnabled,
     shadowBlur: state.shadowBlur,
     shadowOffset: state.shadowOffset,
+    textLocked: state.textLocked,
     imagePosX: state.imagePosX,
     imagePosY: state.imagePosY,
     imageDataUrl: state.imageDataUrl,
@@ -657,6 +659,7 @@ function isValidTemplate(template) {
   if ('textAlign' in template && !['left','center','right'].includes(template.textAlign)) return false;
   if ('strokeColor' in template && !/^#[0-9a-f]{6}$/i.test(template.strokeColor)) return false;
   if ('shadowEnabled' in template && typeof template.shadowEnabled !== 'boolean') return false;
+  if ('textLocked' in template && typeof template.textLocked !== 'boolean') return false;
   return true;
 }
 
@@ -710,6 +713,7 @@ async function applyTemplate(template) {
     shadowEnabled: normalized.shadowEnabled,
     shadowBlur: normalized.shadowBlur,
     shadowOffset: normalized.shadowOffset,
+    textLocked: normalized.textLocked,
     imagePosX: normalized.imagePosX,
     imagePosY: normalized.imagePosY,
     imageDataUrl: normalized.imageDataUrl,
@@ -721,6 +725,7 @@ async function applyTemplate(template) {
   els.colorInput.value = state.color;
   els.xInput.value = String(state.x);
   els.yInput.value = String(state.y);
+  els.textLockToggle.checked = state.textLocked;
   els.fitSelect.value = state.fit;
   els.fontFamilySelect.value = state.fontFamily;
   els.fontWeightSelect.value = String(state.fontWeight);
