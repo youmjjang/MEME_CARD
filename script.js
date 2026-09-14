@@ -16,7 +16,6 @@ const els = {
   xValue: document.getElementById('xValue'),
   yInput: document.getElementById('yInput'),
   yValue: document.getElementById('yValue'),
-  centerTextPositionBtn: document.getElementById('centerTextPositionBtn'),
   fitSelect: document.getElementById('fitSelect'),
   formatSelect: document.getElementById('formatSelect'),
   imagePosXInput: document.getElementById('imagePosXInput'),
@@ -426,13 +425,6 @@ els.resetImagePositionBtn.addEventListener('click', () => {
   updateImagePositionInputs();
   render();
   showMessage('이미지 위치를 가운데로 되돌렸습니다.', 'success');
-});
-
-els.centerTextPositionBtn.addEventListener('click', () => {
-  state.x = 50;
-  state.y = 50;
-  render();
-  showMessage('문구 위치를 가운데로 옮겼습니다.', 'success');
 });
 
 els.imageInput.addEventListener('change', async event => {
