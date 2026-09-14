@@ -167,9 +167,9 @@ async function startServer() {
 
   await check('T05-07', async () => {
     await reset();
-    await input('fontSizeInput', 84);
+    await input('fontSizeInput', 42);
     await input('colorInput', '#ff9900');
-    await page.locator('[data-align="right"]').click();
+    await page.locator('[data-align="left"]').click();
     await input('xInput', 12);
     await input('yInput', 91);
     const before = await page.evaluate(() => ({
