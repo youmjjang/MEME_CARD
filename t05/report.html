@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>T05 · 대화가 끊겨도 이어지는 프로젝트</title>
+  <style>
+    :root { --ink:#172036; --muted:#667085; --line:#dde3ef; --brand:#5b63f6; --soft:#f5f7ff; --ok:#067647; --warn:#b54708; }
+    * { box-sizing:border-box; }
+    body { margin:0; color:var(--ink); background:#eef2f9; font-family:system-ui,-apple-system,"Malgun Gothic",sans-serif; line-height:1.65; }
+    main { width:min(1100px,calc(100% - 32px)); margin:32px auto; }
+    header,.card { background:#fff; border:1px solid var(--line); border-radius:20px; box-shadow:0 12px 28px rgba(38,50,86,.07); }
+    header { padding:32px; background:linear-gradient(135deg,#fff 0%,#f0f2ff 100%); }
+    .eyebrow { margin:0; color:var(--brand); font-weight:900; letter-spacing:.12em; font-size:12px; }
+    h1 { margin:6px 0 8px; font-size:clamp(28px,5vw,46px); line-height:1.18; }
+    header p:last-child { margin:0; color:var(--muted); }
+    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; margin-top:16px; }
+    .card { padding:24px; margin-top:16px; }
+    .grid .card { margin-top:0; }
+    h2 { margin:0 0 14px; font-size:21px; }
+    h3 { margin:18px 0 6px; font-size:16px; }
+    p { margin:8px 0; }
+    .metric { font-size:30px; font-weight:900; color:var(--brand); }
+    .ok { color:var(--ok); font-weight:850; }
+    .warn { color:var(--warn); font-weight:850; }
+    .chips { display:flex; flex-wrap:wrap; gap:8px; margin-top:14px; }
+    .chip { padding:7px 11px; border-radius:999px; background:#fff; border:1px solid var(--line); font-size:13px; font-weight:750; }
+    table { width:100%; border-collapse:collapse; font-size:14px; }
+    th,td { padding:11px 10px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; }
+    th { background:var(--soft); }
+    code { overflow-wrap:anywhere; color:#3448b5; }
+    blockquote { margin:12px 0; padding:12px 16px; border-left:4px solid var(--brand); background:var(--soft); }
+    ol,ul { margin:8px 0; padding-left:22px; }
+    a { color:#3448b5; font-weight:750; }
+    .timeline { display:grid; grid-template-columns:repeat(4,1fr); gap:8px; }
+    .step { padding:12px; border-radius:12px; background:var(--soft); border:1px solid var(--line); }
+    .step b,.step span { display:block; }
+    .step span { color:var(--muted); font-size:13px; }
+    footer { color:var(--muted); text-align:center; padding:24px; }
+    @media (max-width:760px) { .grid,.timeline { grid-template-columns:1fr; } .card,header { padding:20px; } table { display:block; overflow-x:auto; } }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <p class="eyebrow">ALEPH STUDIO · T05 PUBLIC COMPARISON</p>
+    <h1>대화가 없어도 이어진<br>문구 위치 잠금 개선</h1>
+    <p>과제 3 MemeLab의 작은 개선을 두 AI 세션이 저장소와 7항목 인수인계만으로 이어서 완성한 결과입니다.</p>
+    <div class="chips"><span class="chip">고정 검사 10개</span><span class="chip">공통 상한 45분</span><span class="chip">요청 상한 12회</span><span class="chip ok">최종 10/10 PASS</span></div>
+  </header>
+
+  <section class="card">
+    <h2>고정한 개선과 같은 최초 요청</h2>
+    <p><strong>개선 한 개:</strong> 문구 위치를 잠그면 문구 X/Y 입력과 문구 드래그는 막고, 배경 위치와 글자 스타일 편집은 허용하며, 템플릿을 불러올 때 잠금 상태도 복원합니다.</p>
+    <blockquote>시작 저장소와 이 고정 계획만 보고 작업하세요. 작은 개선 목표는 “문구 위치 잠금” 기능입니다. 고정 검사 T05-01~T05-10을 삭제·완화하거나 입력·기대값을 변경하지 말고 모두 통과시키세요. 기존 기능을 유지하고, 검사 실행 결과와 FAIL이 하나 이상인 실행 회차 수를 기록하세요. 시간 45분과 요청·호출 12회 상한을 넘기지 마세요.</blockquote>
+    <p>검사·입력·기대값·상한을 먼저 고정한 버전: <code>ab8aee0af409f3859b03a02adb68d6e7cb49a6a2</code></p>
+  </section>
+
+  <section class="card">
+    <h2>고정 검사 10개</h2>
+    <table>
+      <thead><tr><th>ID</th><th>입력 / 행동</th><th>관찰 가능한 기대값</th></tr></thead>
+      <tbody>
+        <tr><td>T05-01</td><td>편집 화면을 처음 연다.</td><td>문구 위치 잠금 체크박스가 보이고 기본값은 해제 상태다.</td></tr>
+        <tr><td>T05-02</td><td>잠금 체크박스를 켠다.</td><td>선택되고 “문구 위치 잠김”이 보인다.</td></tr>
+        <tr><td>T05-03</td><td>X=30%, Y=40%에서 잠근다.</td><td>X/Y 슬라이더가 비활성화되고 30/40이 유지된다.</td></tr>
+        <tr><td>T05-04</td><td>잠긴 X/Y에 키보드 입력을 시도한다.</td><td>X/Y가 바뀌지 않는다.</td></tr>
+        <tr><td>T05-05</td><td>1:1, 50/50에서 잠근 문구를 드래그한다.</td><td>문구 X/Y가 50/50 그대로다.</td></tr>
+        <tr><td>T05-06</td><td>25/35로 잠근 뒤 4:5로 바꾼다.</td><td>잠금과 25/35가 유지된다.</td></tr>
+        <tr><td>T05-07</td><td>잠근 뒤 배경 X/Y를 20/80으로 바꾼다.</td><td>배경 입력은 활성 상태이고 20/80이 적용된다.</td></tr>
+        <tr><td>T05-08</td><td>잠근 뒤 글자 크기 72px, 색 #ff0000을 적용한다.</td><td>잠금과 새 스타일이 함께 유지된다.</td></tr>
+        <tr><td>T05-09</td><td>잠금을 해제하고 문구 X를 65%로 바꾼다.</td><td>X/Y가 활성화되고 X=65%가 된다.</td></tr>
+        <tr><td>T05-10</td><td>30/40과 잠금을 템플릿으로 저장하고 상태를 바꾼 뒤 불러온다.</td><td>30/40, 잠금 체크, 상태 문구, 비활성 슬라이더가 함께 복원된다.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>작업 순서</h2>
+    <div class="timeline">
+      <div class="step"><b>1 · AI ① 시작</b><span>09:47:40 KST</span><code>ab8aee0…</code></div>
+      <div class="step"><b>2 · AI ① 인계</b><span>09:50:02 KST</span><code>8a441be…</code></div>
+      <div class="step"><b>3 · AI ② 시작</b><span>09:51:25 KST</span><code>8a441be…</code></div>
+      <div class="step"><b>4 · AI ② 완료</b><span>09:53:54 KST</span><code>057d424…</code></div>
+    </div>
+    <p><a href="https://github.com/youmjjang/MEME_CARD/issues/2">AI ①이 남기고 AI ②가 그대로 받은 7항목 인수인계 문서</a> · 인수인계 누락: <strong>없음</strong></p>
+  </section>
+
+  <section class="grid" aria-label="이름을 가린 측정 비교">
+    <article class="card">
+      <h2>AI ①</h2>
+      <div class="metric">9 / 10</div>
+      <p class="warn">첫 회차 T05-10 FAIL</p>
+      <table><tbody><tr><th>실제 작업시간</th><td>2분 22초</td></tr><tr><th>학생→AI 요청</th><td>1회 / 상한 12회</td></tr><tr><th>오류 회차</th><td>1회</td></tr><tr><th>시작 버전</th><td><code>ab8aee0…</code></td></tr><tr><th>종료 버전</th><td><code>8a441be…</code></td></tr></tbody></table>
+    </article>
+    <article class="card">
+      <h2>AI ②</h2>
+      <div class="metric">10 / 10</div>
+      <p class="ok">남은 템플릿 잠금 복원 완성</p>
+      <table><tbody><tr><th>실제 작업시간</th><td>2분 29초</td></tr><tr><th>학생→AI 요청</th><td>2회 / 상한 12회</td></tr><tr><th>오류 회차</th><td>1회</td></tr><tr><th>시작 버전</th><td><code>8a441be…</code></td></tr><tr><th>종료 버전</th><td><code>057d424…</code></td></tr></tbody></table>
+    </article>
+  </section>
+
+  <section class="card">
+    <h2>검사 보존과 최종 결과</h2>
+    <p>AI ②의 변경은 <code>script.js</code> 5줄 추가뿐이며, 고정 계획과 검사 파일의 diff는 0입니다.</p>
+    <ul><li>고정 검사 삭제: <strong>0건</strong></li><li>검사 완화: <strong>0건</strong></li><li>입력·기대값 변경: <strong>0건</strong></li><li>최종 고정 검사: <strong class="ok">10/10 PASS</strong></li><li>기존 회귀 검사: <strong class="ok">23/23 PASS</strong></li></ul>
+    <p><strong>다음 작업의 도구 선택 기준:</strong> 재현 명령과 첫 실패가 명확한 작업은 같은 검사를 빠르게 실행하고 최소 소스만 고치는 도구를 먼저 선택한다.</p>
+  </section>
+
+  <section class="grid">
+    <article class="card">
+      <h2>짧은 확인 방법 4줄</h2>
+      <ol><li><strong>위치:</strong> <a href="../index.html">MemeLab 편집 화면</a>의 문구 X/Y 아래로 갑니다.</li><li><strong>3단계 이내 행동:</strong> 문구 위치 잠금을 켜고 X/Y 슬라이더와 문구 드래그를 시도합니다.</li><li><strong>통과 모습:</strong> “문구 위치 잠김”이 보이고 X/Y는 움직이지 않지만 배경·글자 스타일은 바뀝니다.</li><li><strong>안 될 때 모습:</strong> 잠금 중 X/Y나 문구가 움직이거나, 배경·스타일까지 함께 막힙니다.</li></ol>
+    </article>
+    <article class="card">
+      <h2>AI와 나의 판단 3줄</h2>
+      <ol><li><strong>AI에게 맡긴 일:</strong> 잠금 기능 구현, 고정 브라우저 검사 실행, 인수인계 기반의 남은 기능 완성을 맡겼습니다.</li><li><strong>직접 판단한 일:</strong> 실수 방지에 유용한 문구 위치 잠금을 개선 한 개로 정하고, 10개 입력·기대값과 공통 상한을 작업 전에 확정했습니다.</li><li><strong>AI 제안을 따르지 않은 일:</strong> 잠금이 모든 편집을 막게 하지 않고 문구 위치만 막아 배경·스타일 편집은 유지했습니다.</li></ol>
+    </article>
+  </section>
+
+  <section class="card">
+    <h2>개인정보·비밀값 확인</h2>
+    <p class="ok">공개 비교 화면의 실제 개인정보 0건 · 공개 화면·저장소·제출물의 비밀값 원문 0건</p>
+  </section>
+  <footer>작성 기준: 2026-09-14 KST · 판정 구간에서는 모델·서비스 이름을 표시하지 않았습니다.</footer>
+</main>
+</body>
+</html>
